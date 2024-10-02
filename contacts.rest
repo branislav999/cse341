@@ -1,0 +1,23 @@
+GET http://localhost:5000/contacts
+Accept: application/json
+###
+GET http://localhost:5000/contacts/66fcb1375dc4de09fb15a468
+Accept: application/json
+###
+GET http://localhost:5000/contacts/66fcb1705dc4de09fb15a469
+Accept: application/json
+###
+GET http://localhost:5000/contacts/66fcb1c55dc4de09fb15a46a
+Accept: application/json
+###
+GET https://cse341-joqm.onrender.com/contacts
+Accept: application/json
+###
+GET https://cse341-joqm.onrender.com/contacts/66fcb1375dc4de09fb15a468
+Accept: application/json
+###
+GET https://cse341-joqm.onrender.com/contacts/66fcb1705dc4de09fb15a469
+Accept: application/json
+###
+GET https://cse341-joqm.onrender.com/contacts/66fcb1c55dc4de09fb15a46a
+Accept: application/json
