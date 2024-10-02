@@ -3,7 +3,7 @@ const { MongoClient, ObjectId } = require('mongodb');
 const router = express.Router();
 require('dotenv').config();
 
-const uri = process.env.MongoDBstring;
+const uri = process.env.MongoDBString;
 const client = new MongoClient(uri);
 
 async function connectDB() {
