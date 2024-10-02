@@ -19,5 +19,32 @@ Accept: application/json
 GET https://cse341-joqm.onrender.com/contacts/66fcb1705dc4de09fb15a469
 Accept: application/json
 ###
-GET https://cse341-joqm.onrender.com/contacts/66fcb1c55dc4de09fb15a46a
+GET https://cse341-joqm.onrender.com/contacts/66fcb1c55dc4de09fb15a46a 
 Accept: application/json
+
+### 
+POST http://localhost:5000/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Dragan", 
+    "lastName":"Pavlovic",
+    "email":"draganpavlovi@gmail.com",
+    "favoriteColor":"Blue", 
+    "birthday": "1958-02-13"
+}
+
+###
+PUT http://localhost:5000/contacts/66fd09628f39c59490dd1669 HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Djsole", 
+    "lastName":"Pavlovic",
+    "email":"draganpavlovi@gmail.com",
+    "favoriteColor":"Blue", 
+    "birthday": "1958-02-13"
+}
+
+###
+DELETE http://localhost:5000/contacts/66fd09628f39c59490dd1669  HTTP/1.1
