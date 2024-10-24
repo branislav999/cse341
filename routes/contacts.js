@@ -13,7 +13,17 @@ async function connectDB() {
 
 connectDB().catch(console.error); 
 
-router.get('/', async (req, res) => { 
+
+/**
+ * @swagger
+ * /contacts/:
+ *   get:
+ *     summary: Retrieve contacts
+ *     responses:
+ *       200:
+ *         description: A list of contacts
+ */
+router.get('/contacts/', async (req, res) => { 
     try {
         const database = client.db('cse340'); 
         const collection = database.collection('contacts');
@@ -24,7 +34,16 @@ router.get('/', async (req, res) => {
     }
 });
 
-router.get('/:id', async (req, res) => {
+/**
+ * @swagger
+ * /contacts/:id:
+ *   get:
+ *     summary: Retrieve one contact
+ *     responses:
+ *       200:
+ *         description: Retrieve a contact based on the id
+ */
+router.get('/contacts/:id', async (req, res) => {
     const id = req.params.id;
     try {
         const database = client.db('cse340'); 
@@ -43,7 +62,16 @@ router.get('/:id', async (req, res) => {
     }
 });
 
-router.post('/', async(req, res) => {
+/**
+ * @swagger
+ * /contacts/:
+ *   post:
+ *     summary: Add a contact
+ *     responses:
+ *       200:
+ *         description: Insert a contact
+ */
+router.post('/contacts/', async(req, res) => {
     const {firstName, lastName, email, favoriteColor, birthday} = req.body;
 
     if(!firstName || !lastName || !email || !favoriteColor || !birthday){
@@ -67,7 +95,16 @@ router.post('/', async(req, res) => {
 
 });
 
-router.put('/:id', async (req, res) => {
+/**
+ * @swagger
+ * /contacts/:id:
+ *   put:
+ *     summary: Edit a contact
+ *     responses:
+ *       200:
+ *         description: edit one contact by id
+ */
+router.put('/contacts/:id', async (req, res) => {
     
     const id = req.params.id;
     const { firstName, lastName, email, favoriteColor, birthday } = req.body;
@@ -97,7 +134,16 @@ router.put('/:id', async (req, res) => {
 
 });
 
-router.delete('/:id', async(req, res) => {
+/**
+ * @swagger
+ * /contacts/:id:
+ *   delete:
+ *     summary: Delete a contact
+ *     responses:
+ *       200:
+ *         description: remove one contact by id
+ */
+router.delete('/contacts/:id', async(req, res) => {
 
     const id = req.params.id;
 
