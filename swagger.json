@@ -5,10 +5,10 @@
     "description": "Holds information about contacts",
     "version": "1.0.0"
   },
-  "host": "localhost:5000",
+  "host": "cse341-joqm.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/contacts/": {
