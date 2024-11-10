@@ -16,7 +16,7 @@ connectDB().catch(console.error);
 
 /**
  * @swagger
- * /contacts/
+ * /contacts/:
  *   get:
  *     summary: Retrieve contacts
  *     responses:
@@ -36,7 +36,7 @@ router.get('/contacts/', async (req, res) => {
 
 /**
  * @swagger
- * /contacts/:id
+ * /contacts/:id:
  *   get:
  *     summary: Retrieve one contact
  *     responses:
@@ -64,7 +64,7 @@ router.get('/contacts/:id', async (req, res) => {
 
 /**
  * @swagger
- * /contacts/
+ * /contacts/:
  *   post:
  *     summary: Add a contact
  *     responses:
@@ -97,7 +97,7 @@ router.post('/contacts/', async(req, res) => {
 
 /**
  * @swagger
- * /contacts/:id
+ * /contacts/:id:
  *   put:
  *     summary: Edit a contact
  *     responses:
